@@ -1,0 +1,118 @@
+@import "couleurs"
+
+/* Sémantique */
+html
+	height : 100%
+	margin : 0
+	padding : 0
+
+	body
+		height : 100%
+		position : relative
+		margin : 0
+
+	.bg-header
+		background : $green
+		padding : 5px 0
+		color : $white
+		font-weight : bold
+		line-height : 2
+
+		img
+			display : block
+			margin : 0 auto
+
+	content
+		float : left
+
+	aside 
+		background : $grey
+		height : 100%
+		position : fixed
+		float : right
+		color : $white
+
+		.wrap
+			margin-top : 25px
+			margin-bottom : 25px
+
+		footer
+			margin-top : 50px
+
+	nav
+		padding-top : 5px
+		
+		li
+
+			a
+				color : $white
+				font-weight : bold
+
+				&:hover
+					color : $white
+
+
+.nav>li>a:focus, .nav>li>a:hover
+	background-color : $green
+
+/* texte */
+h2
+	color : #ff3058
+	text-align : center
+	font-weight : bold
+
+h3
+	color : #ff3058
+
+
+.indice
+	display : inline-block
+	margin-top : 5px
+	color : $green
+	font-weight : bold
+
+.logo
+	text-align : center
+	color : $pink
+	font-weight : bold
+
+/* tableau */	
+.planning
+	width : 100%
+	heaight : 100%
+	color : $grey
+	text-align : center
+	border : 2px solid $green
+
+	thead
+		td
+			border : 1px solid $white
+			background : $green
+
+	tbody
+		tr
+			height : 50px
+
+			td
+				border : 1px solid $green
+				width : 7/100*100%
+
+				&:nth-of-child(2+n)
+					display : none
+
+/* formulaire */
+.form-control
+	background : $grey
+	color : $white
+	font-weight : bold
+	margin : 10px auto
+
+	option
+		text-align : center
+		font-weight : bold
+
+		&:focus
+			background : $green
+/* autres */
+hr
+	border-top : 1px solid $lightGrey
