@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Bootstrap 101 Template</title>
+  <title>Projet Planning</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,12 +25,7 @@
     <div class="bg-header">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-10">
-            <span class="logo">
-              <img class="logo" src="img/logo.png" alt="NovY"/>
-            </span>
-          </div>
-          <div class="col-lg-2">
+          <div class="col-lg-2 col-lg-offset-10">
             <p>Bonjour Pierre</p>
           </div>
         </div>
@@ -88,7 +83,9 @@
 
   <aside class="col-lg-2">
     <div class="container-fluid">
-
+      <span class="logo">
+        <img class="logo" src="img/logo.png" alt="NovY"/>
+      </span>
       <nav>
         <ul class="nav nav-pills nav-stacked">
           <li><a href="#"><i class="fa fa-home fa-fw"></i> Accueil</a></li>

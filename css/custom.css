@@ -26,7 +26,7 @@ html .bg-header img {
   margin: 0 auto;
 }
 /* line 25, ../sass/custom.sass */
-html content {
+html .content {
   float: left;
 }
 /* line 28, ../sass/custom.sass */
@@ -36,49 +36,51 @@ html aside {
   position: fixed;
   float: right;
   color: #fff;
+  position: fixed;
+  padding: 15px 0;
 }
-/* line 35, ../sass/custom.sass */
+/* line 37, ../sass/custom.sass */
 html aside .wrap {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-/* line 39, ../sass/custom.sass */
+/* line 41, ../sass/custom.sass */
 html aside footer {
   margin-top: 50px;
 }
-/* line 42, ../sass/custom.sass */
+/* line 44, ../sass/custom.sass */
 html nav {
-  padding-top: 5px;
+  padding-top: 10px;
 }
-/* line 47, ../sass/custom.sass */
+/* line 49, ../sass/custom.sass */
 html nav li a {
   color: #fff;
   font-weight: bold;
 }
-/* line 51, ../sass/custom.sass */
+/* line 53, ../sass/custom.sass */
 html nav li a:hover {
   color: #fff;
 }
 
-/* line 55, ../sass/custom.sass */
+/* line 57, ../sass/custom.sass */
 .nav > li > a:focus, .nav > li > a:hover {
   background-color: #2DC89B;
 }
 
 /* texte */
-/* line 59, ../sass/custom.sass */
+/* line 61, ../sass/custom.sass */
 h2 {
   color: #ff3058;
   text-align: center;
   font-weight: bold;
 }
 
-/* line 64, ../sass/custom.sass */
+/* line 66, ../sass/custom.sass */
 h3 {
   color: #ff3058;
 }
 
-/* line 68, ../sass/custom.sass */
+/* line 70, ../sass/custom.sass */
 .indice {
   display: inline-block;
   margin-top: 5px;
@@ -86,15 +88,17 @@ h3 {
   font-weight: bold;
 }
 
-/* line 74, ../sass/custom.sass */
+/* line 76, ../sass/custom.sass */
 .logo {
   text-align: center;
   color: #ff3058;
   font-weight: bold;
+  display: block;
+  margin: 0 auto;
 }
 
 /* tableau */
-/* line 80, ../sass/custom.sass */
+/* line 84, ../sass/custom.sass */
 .planning {
   width: 100%;
   heaight: 100%;
@@ -102,45 +106,70 @@ h3 {
   text-align: center;
   border: 2px solid #2DC89B;
 }
-/* line 88, ../sass/custom.sass */
+/* line 92, ../sass/custom.sass */
 .planning thead td {
   border: 1px solid #fff;
   background: #2DC89B;
 }
-/* line 93, ../sass/custom.sass */
+/* line 97, ../sass/custom.sass */
 .planning tbody tr {
   height: 50px;
 }
-/* line 96, ../sass/custom.sass */
+/* line 100, ../sass/custom.sass */
 .planning tbody tr td {
   border: 1px solid #2DC89B;
   width: 7.0%;
 }
-/* line 100, ../sass/custom.sass */
+/* line 104, ../sass/custom.sass */
 .planning tbody tr td:nth-of-child(2+n) {
   display: none;
 }
 
 /* formulaire */
-/* line 104, ../sass/custom.sass */
+/* line 108, ../sass/custom.sass */
 .form-control {
   background: #383d41;
   color: #fff;
   font-weight: bold;
   margin: 10px auto;
 }
-/* line 110, ../sass/custom.sass */
+/* line 114, ../sass/custom.sass */
 .form-control option {
   text-align: center;
   font-weight: bold;
 }
-/* line 114, ../sass/custom.sass */
+/* line 118, ../sass/custom.sass */
 .form-control option:focus {
   background: #2DC89B;
 }
 
 /* autres */
-/* line 117, ../sass/custom.sass */
+/* line 121, ../sass/custom.sass */
 hr {
   border-top: 1px solid #69737A;
+}
+
+/*  */
+/* line 126, ../sass/custom.sass */
+.wrap-co {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 220px;
+  margin-left: -150px;
+  margin-top: -110px;
+  border: 1px solid #ff3058;
+  box-sizing: padding-box;
+  padding: 5px 20px;
+}
+/* line 138, ../sass/custom.sass */
+.wrap-co h3, .wrap-co p {
+  text-align: center;
+}
+/* line 141, ../sass/custom.sass */
+.wrap-co input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0 5px;
 }
