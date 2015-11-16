@@ -1,4 +1,13 @@
 @import "couleurs"
+@import "fonts"
+
+/* bootstrap */
+.container-fluid
+	height : 100%
+
+	.row
+		height : 100%
+
 
 /* Sémantique */
 html
@@ -8,7 +17,6 @@ html
 
 	body
 		height : 100%
-		position : relative
 		margin : 0
 
 	.bg-header
@@ -18,33 +26,49 @@ html
 		font-weight : bold
 		line-height : 2
 
-		img
-			display : block
-			margin : 0 auto
+		.school-name
+			font-size : 24px
+			color : $pink
+			text-align : center
+			font-family : Pigiarniq
 
 	.content
 		float : left
+		padding : 0
 
-	aside 
+		.calendar
+			padding : 0 15px
+
+	aside.col-lg-2
 		background : $grey
 		height : 100%
 		position : fixed
-		float : right
 		color : $white
-		position : fixed
 		padding : 15px 0
+		top : 0
+		right : 0
+		text-align : center
 
 		.wrap
-			margin-top : 25px
-			margin-bottom : 25px
+			margin-top : 40px
+			margin-bottom : 60px
+			
 
 		footer
 			margin-top : 50px
+			position : absolute
+			bottom : 0
+			right : 20%
+			left : 20%
+			text-align : center
 
 	nav
-		padding-top : 10px
+		margin-top : 60px
 		
 		li
+			background : $green
+			margin-bottom : 10px
+			text-align : center
 
 			a
 				color : $white
@@ -69,7 +93,7 @@ h3
 
 .indice
 	display : inline-block
-	margin-top : 5px
+	margin-top : 15px
 	color : $green
 	font-weight : bold
 
@@ -117,6 +141,41 @@ h3
 
 		&:focus
 			background : $green
+
+
+label
+	width : 210px
+	display : block
+	margin : 15px auto
+
+	.btn-add-form
+		height : 24px
+		border : 2px solid $white
+		padding : 2px
+		background : $grey
+		color : $white
+		width : 100%
+
+	.btn-add-form-date
+		width : 30%
+		height : 24px
+		border : 2px solid $white
+		padding : 2px
+		background : $grey
+		color : $white
+
+
+.btn-add-form[type="submit"]
+	background : $white
+	color : $grey
+	width : 120px
+	height : 40px
+	display : block
+	margin : 25px auto
+	border : none
+
+
+
 /* autres */
 hr
 	border-top : 1px solid $lightGrey
@@ -142,3 +201,19 @@ hr
 		width : 100%
 		margin-bottom : 15px
 		padding : 0 5px
+
+.btn-planning, .btn-planning-admin
+	background : $grey
+	color : $white
+	margin : 10px 0
+	width : 150px
+	font-weight : bold
+	position : relative
+
+
+.btn-planning-admin
+
+	i
+		position : absolute
+		right : 10px
+		top : 10px

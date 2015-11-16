@@ -30,10 +30,10 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-8 col-lg-offset-2 school-name">
-                <p>Ingésup</p>
+                <p>Admin panel</p>
               </div>
               <div class="col-lg-2">
-                <p>Bonjour Pierre</p>
+                <p>Bonjour Admin</p>
               </div>
             </div>
           </div>
@@ -42,15 +42,24 @@
 
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-          <div class="col-lg-2 col-lg-offset-3">
-            <button class="btn btn-planning">Cette semaine</button>
+          <div class="col-lg-2 col-lg-offset-2">
+            <select class="btn btn-planning-admin">
+              <option value="" disabled selected>Ecole</option>
+            </select>
           </div>
           <div class="col-lg-2">
-            <button class="btn btn-planning">Semaine prochaine</button>
+            <select class="btn btn-planning-admin">
+              <option value="" disabled selected>Promotion</option>
+            </select>
           </div>
           <div class="col-lg-2">
-            <button class="btn btn-planning">Semaine suivante</button>
-          </div><!--  end col-2 -->
+            <select class="btn btn-planning-admin">
+              <option value="" disabled selected>Spécialité</option>
+            </select>
+          </div>
+          <div class="col-lg-2">
+            <button type="submit" class="btn btn-planning">Valider</button>
+          </div>
         </div>
         <div class="col-lg-2 indice">
             Indice : 3
@@ -101,38 +110,24 @@
           <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a></li>
         </ul>
       </nav>
-      
-      <div class="container-fluid">
 
-        <div class="wrap">
-          <h3>Matières</h3>
-          <p>8H - 12H : C# en B3</p>
-          <p>8H - 12H : Swift en B3</p>
-        </div>
-
-        <div class="wrap">
-          <h3>Projets</h3>
-          <p>Arkhe</p>
-          <p>Planning</p>
-        </div>
-
-
-        <div class="wrap">
-          <h3>Voter la répartition</h3>
-          <p>
-            <i class="fa fa-star fa-fw"></i>
-            <i class="fa fa-star fa-fw"></i>
-            <i class="fa fa-star-half-full fa-fw"></i>
-            <i class="fa fa-star-o fa-fw"></i>
-            <i class="fa fa-star-o fa-fw"></i>
-          </p>
-        </div>
-
+      <nav class="admin">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Ecole</a></li>
+          <li><a href="#">Promotion</a></li>
+          <li><a href="#">Spécialité</a></li>
+          <li><a href="#">Tâches (matières)</a></li>
+          <li><a href="#">Tâches (projet)</a></li>
+          <li><a href="#">Matières</a></li>
+          <li><a href="#">Intervenants</a></li>
+          <li><a href="#">Etudiants</a></li>
+          <li><a href="#">Admin</a></li>
+        </ul>
+      </nav>
 
         <footer>
          <p>©Novy, 2015</p>
         </footer>
-      </div>
   </aside>
 
   </div> <!-- end row -->
