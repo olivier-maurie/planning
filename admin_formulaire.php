@@ -23,51 +23,43 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-10 content">
+    <div class="col-lg-10 col-md-9 col-sm-9 content">
       
       <header>
         <div class="bg-header">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 school-name">
-                <p>Admin panel</p>
-              </div>
-              <div class="col-lg-2">
-                <p>Bonjour Admin</p>
-              </div>
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-sm-10 school-name">
+              <p>Admin panel</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2">
+              <p>Bonjour Admin</p>
             </div>
           </div>
         </div>
       </header>
 
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="col-lg-2 col-lg-offset-2">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-sm-10">
+          <div class="btn-group-s">
             <select class="btn btn-planning-admin">
               <option value="" disabled selected>Ecole</option>
             </select>
-          </div>
-          <div class="col-lg-2">
             <select class="btn btn-planning-admin">
               <option value="" disabled selected>Promotion</option>
             </select>
-          </div>
-          <div class="col-lg-2">
             <select class="btn btn-planning-admin">
               <option value="" disabled selected>Spécialité</option>
             </select>
-          </div>
-          <div class="col-lg-2">
             <button type="submit" class="btn btn-planning">Valider</button>
           </div>
         </div>
-        <div class="col-lg-2 indice">
+        <div class="col-lg-2 col-md-2 col-sm-2 indice">
             Indice : 3
         </div>
       </div> <!-- end row -->
 
       <div class="row calendar">
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
           <table class="table planning">
             <thead>
               <tr>
@@ -99,19 +91,10 @@
       </div> <!-- end row -->
     </div> <!-- end col-10 -->
 
-  <aside class="col-lg-2">
-      <span class="logo">
-        <img class="logo" src="img/logo.png" alt="NovY"/>
-      </span>
-      <nav>
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="#"><i class="fa fa-home fa-fw"></i> Accueil</a></li>
-          <li><a href="#"><i class="fa fa-gear fa-fw"></i> Paramettres</a></li>
-          <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a></li>
-        </ul>
-      </nav>
+  <aside class="col-lg-2 col-md-3 col-sm-3">
+      <?php include('inc/menu.php'); ?>
 
-      <div class="container-fluid">
+      <div class="container-fluid wrap-form">
         <h3>Ajouter</h3>
         <form action="admin_formulaire.php">
           <label for="nom_matiere">

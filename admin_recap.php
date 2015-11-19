@@ -1,3 +1,5 @@
+<?php include_once('inc/bdd.php'); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,10 +31,10 @@
         <div class="bg-header">
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-sm-10 school-name">
-              <p>Ingésup</p>
+              <p>Admin panel</p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2">
-              <p>Bonjour Pierre</p>
+              <p>Bonjour Admin</p>
             </div>
           </div>
         </div>
@@ -41,43 +43,60 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-sm-10">
           <div class="btn-group-s">
-            <button class="btn btn-planning">Cette semaine</button>
-            <button class="btn btn-planning">Semaine prochaine</button>
-            <button class="btn btn-planning">Semaine suivante</button>
+            <select class="btn btn-planning-admin">
+              <option value="" disabled selected>Ecole</option>
+            </select>
+            <select class="btn btn-planning-admin">
+              <option value="" disabled selected>Promotion</option>
+            </select>
+            <select class="btn btn-planning-admin">
+              <option value="" disabled selected>Spécialité</option>
+            </select>
+            <button type="submit" class="btn btn-planning">Valider</button>
           </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2 indice">
-            <p>Indice : 3</p>
+            Indice : 3
         </div>
       </div> <!-- end row -->
 
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-10">
+          <div class="btn-group-s">
+            <button class="btn btn-planning">Ajouter</button>
+          </div>
+        </div>
+      </div>
+
       <div class="row calendar">
         <div class="col-lg-12 col-md-12 col-sm-12">
-          <table class="table planning">
+          <table class="table">
             <thead>
               <tr>
               <?php
-                $tab = array("Heures", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
-                for($c=0;$c<7;$c++){
-                  echo "<td>".$tab[$c]."</td>";
+                $name_col = array('idmatiere_cours', 'date_debut', 'date_fin', 'heure_cours', 'salle', 'id_matirere', 'id_promotion', 'id_specialite');
+                foreach($name_col as $col){
+                  echo '<td>'.$col.'</td>';
                 }
               ?>
               </tr>
             </thead>
             <tbody>
-            <?php
-            for($c=8;$c<21;$c++){
-              echo '<tr>
-                    <td>'.$c.'H</td>
-                    <td><hr></td>
-                    <td><hr></td>
-                    <td><hr></td>
-                    <td><hr></td>
-                    <td><hr></td>
-                    <td><hr></td>
-                    </tr>';
-              }
-            ?>
+              <?php
+                $res = $bdd->query('SELECT * FROM matiere_cours');
+                while($data = $res->fetch()){
+                  echo '<tr>
+                          <td>'.$data['idmatiere_cours'].'</td>
+                          <td>'.$data['date_debut'].'</td>
+                          <td>'.$data['date_fin'].'</td>
+                          <td>'.$data['heure_cours'].'</td>
+                          <td>'.$data['salle'].'</td>
+                          <td>'.$data['id_matiere'].'</td>
+                          <td>'.$data['id_promotion'].'</td>
+                          <td>'.$data['id_specialite'].'</td>
+                        </tr>';
+                }
+              ?>
             </tbody>
           </table>
         </div> <!-- end col-12 -->
@@ -86,38 +105,24 @@
 
   <aside class="col-lg-2 col-md-3 col-sm-3">
       <?php include('inc/menu.php'); ?>
-      
-      <div class="container-fluid">
 
-        <div class="wrap">
-          <h3>Matières</h3>
-          <p>8H - 12H : C# en B3</p>
-          <p>8H - 12H : Swift en B3</p>
-        </div>
-
-        <div class="wrap">
-          <h3>Projets</h3>
-          <p>Arkhe</p>
-          <p>Planning</p>
-        </div>
-
-
-        <div class="wrap">
-          <h3>Voter la répartition</h3>
-          <p>
-            <i class="fa fa-star fa-fw"></i>
-            <i class="fa fa-star fa-fw"></i>
-            <i class="fa fa-star-half-full fa-fw"></i>
-            <i class="fa fa-star-o fa-fw"></i>
-            <i class="fa fa-star-o fa-fw"></i>
-          </p>
-        </div>
-
+      <nav class="admin">
+        <ul class="nav nav-pills nav-stacked">
+          <a href="#" class="btn">Ecole</a>
+          <a href="#" class="btn">Promotion</a>
+          <a href="#" class="btn">Spécialité</a>
+          <a href="#" class="btn">Tâches (matières)</a>
+          <a href="#" class="btn">Tâches (projet)</a>
+          <a href="#" class="btn">Matières</a>
+          <a href="#" class="btn">Intervenants</a>
+          <a href="#" class="btn">Etudiants</a>
+          <a href="#" class="btn">Admin</a>
+        </ul>
+      </nav>
 
         <footer>
          <p>©Novy, 2015</p>
         </footer>
-      </div>
   </aside>
 
   </div> <!-- end row -->
