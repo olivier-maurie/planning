@@ -19,16 +19,25 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body>
+<body class="bg_co">
 
   <div class="wrap-co">
-    <h3>Connexion</h3>
+    <div>
+      <span class="logo">
+        <img class="logo" src="img/logo.png" alt="NovY"/>
+      </span>
+      <p>
+        Connexion
+      </p>
+    </div>
+    <div>
       <form action="connexion.php">
-        <input type="mail" placeholder="exemple@novy.com"/>
-        <input type="password"/>
-        <input type="submit"value="Connexion"/>
+        <input type="mail" class="form-control" placeholder="exemple@novy.com"/><i class="fa fa-user"></i>
+        <input type="password" class="form-control" placeholder="Mot de passe"/><i class="fa fa-lock"></i>
+        <button class="btn" type="submit">Connexion</button>
       </form>
-      <p><a href="#">Mot de passe oublié</a></p>
+    </div>
+<!--       <p><a href="#">Mot de passe oublié</a></p> -->
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

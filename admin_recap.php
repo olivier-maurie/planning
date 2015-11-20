@@ -33,7 +33,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-sm-10 school-name">
               <p>Admin panel</p>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="col-lg-2 col-md-2 col-sm-2 user">
               <p>Bonjour Admin</p>
             </div>
           </div>

@@ -20,6 +20,9 @@ html
 		height : 100%
 		margin : 0
 
+	.bg_co
+		background-image : url('../img/bg_co.jpg')
+
 	.bg-header
 		background : $green
 		padding : 5px 0
@@ -32,6 +35,9 @@ html
 			color : $pink
 			text-align : center
 			font-family : Pigiarniq
+
+		.user
+			padding-top : 15px
 
 	.content
 		float : left
@@ -51,7 +57,15 @@ html
 
 		.wrap
 			width : 80%
-			margin : 0 10%
+			margin-left : 10%
+			margin-right : 10%
+			margin-top : 40px
+			
+			.vote
+				text-align : center
+
+			h3
+				text-align : center
 
 		.wrap-form
 			width : 90%
@@ -59,9 +73,6 @@ html
 			
 			h3
 				text-align : center
-
-
-
 
 		footer
 			margin-top : 50px
@@ -198,21 +209,69 @@ hr
 	position : absolute
 	left : 50%
 	top : 50%
-	width : 300px
-	height : 220px
-	margin-left : -150px
-	margin-top : -110px
-	border : 1px solid $pink
+	width : 600px
+	height : 250px
+	margin-left : -300px
+	margin-top : -125px
+	// border : 1px solid $pink
 	box-sizing : padding-box
-	padding : 5px 20px
+	padding : 15px 20px
+	background : $white
 
-	h3, p
-		text-align : center
+	div
+		width : 50%
+
+		&:first-child
+			border-right : 1px solid $darkWhite
+			height : 100%
+			margin-left : -20px
+			float : left
+
+		&:last-child
+			margin-top : 25px
+			float : right
+
+
+	p
+		text-align : right
+		margin-right : 25px
+		font-family : Pigiarniq
+		font-size : 20px
+		color : $lightGrey
+		font-weight : 400
+
+	img
+		margin : 15px auto 40px
+		height : auto
+		display : block
 
 	input
 		width : 100%
-		margin-bottom : 15px
-		padding : 0 5px
+		height : 49px
+		padding-left : 35px
+		background : $white
+		position : relative
+		color : $black
+		font-weight : 100
+		box-sizing : padding-box
+		margin : auto
+
+	i
+		position : relative
+		top : -36px
+		left : 15px
+
+	button
+		float : right 
+		margin-top : 20px
+		background : $green
+		color : $white
+
+		&:hover
+			background : $darkGreen
+			color : $white
+
+
 .btn-group-s
 	width : 100%
 	margin : 0 auto
@@ -224,11 +283,11 @@ hr
 		color : $white
 		margin : 10px 0
 		width : 150px
-		font-weight : bold
+		font-weight : 550
 		position : relative
 
 		&:hover, &:focus
-			background : $green
+			background : $darkGreen
 			color : $white
 
 

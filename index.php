@@ -31,7 +31,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-sm-10 school-name">
               <p>Ingésup</p>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="col-lg-2 col-md-2 col-sm-2 user">
               <p>Bonjour Pierre</p>
             </div>
           </div>
@@ -104,7 +104,7 @@
 
         <div class="wrap">
           <h3>Voter la répartition</h3>
-          <p>
+          <p class="vote">
             <i class="fa fa-star fa-fw"></i>
             <i class="fa fa-star fa-fw"></i>
             <i class="fa fa-star-half-full fa-fw"></i>
